@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        .container{
+            width:700px;
+            background: rgba(0,0,0,0.75);
+            padding:40px;
+            border-radius:20px;
+            color:white;
+            backdrop-filter: blur(8px);
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:10px;
+            font-size:36px;
+            color:#00c3ff;
+        }
+
+        p{
+            text-align:center;
+            margin-bottom:30px;
+            color:#dcdcdc;
+        }
+
+        .form-group{
+            margin-bottom:18px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:bold;
+        }
+
+        input, select{
+            width:100%;
+            padding:12px;
+            border:none;
+            border-radius:10px;
+            font-size:16px;
+        }
+
+        input:focus, select:focus{
+            outline:none;
+            border:2px solid #00c3ff;
+        }
+
+        button{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:12px;
+            background:#00c3ff;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+            margin-top:10px;
+        }
+
+        button:hover{
+            background:#009acd;
+        }
+
+        .prediction{
+            margin-top:25px;
+            text-align:center;
+            font-size:24px;
+            color:#00ff88;
+            font-weight:bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚗 Car Price Prediction</h1>
+    <p>Predict your second hand car price instantly</p>
+
+    <form action="/predict" method="POST">
+
+        <div class="form-group">
+            <label>Car Brand / Company</label>
+            <input type="text" placeholder="Enter car brand">
+        </div>
+
+        <div class="form-group">
+            <label>Car Model</label>
+            <input type="text" placeholder="Enter car model">
+        </div>
+
+        <div class="form-group">
+            <label>Manufacturing Year</label>
+            <input type="number" name="year" required>
+        </div>
+
+        <div class="form-group">
+            <label>Kilometers Driven</label>
+            <input type="number" name="kms" required>
+        </div>
+
+        <div class="form-group">
+            <label>Fuel Type</label>
+            <select>
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>CNG</option>
+                <option>Electric</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Transmission Type</label>
+            <select>
+                <option>Manual</option>
+                <option>Automatic</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Registration City</label>
+            <input type="text" placeholder="Enter city">
+        </div>
+
+        <div class="form-group">
+            <label>Assembly Type</label>
+            <select>
+                <option>Local</option>
+                <option>Imported</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Car Condition (1-10)</label>
+            <input type="number" name="condition" min="1" max="10" required>
+        </div>
+
+        <div class="form-group">
+            <label>Features</label>
+            <input type="text" placeholder="AC, Sunroof, Navigation etc">
+        </div>
+
+        <button type="submit">Predict Price</button>
+
+    </form>
+
+    <div class="prediction">
+        {{ prediction_text }}
+    </div>
+
+</div>
+
+</body>
+</html>
