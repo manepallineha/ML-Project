@@ -71,7 +71,7 @@ ML Project/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/manepallineha/ML-Project
 ```
 
 ### 2️⃣ Go to project folder
