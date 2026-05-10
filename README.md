@@ -56,7 +56,7 @@ ML Project/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone <your-github-repository-link>
+git clone <https://github.com/manepallineha/ML-Project>
 ```
 
 ### 2️⃣ Open Project Folder
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ### 4️⃣ Run Flask Application
 
 ```bash
-python main.py
+
 ```
 
 ### 5️⃣ Open In Browser
