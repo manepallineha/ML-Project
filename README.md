@@ -1,24 +1,28 @@
 # 🚗 Car Price Prediction Using Machine Learning
 
-This is an end-to-end Machine Learning web application that predicts the price of a second-hand car based on user inputs such as manufacturing year, kilometers driven, and car condition.
+A complete end-to-end Machine Learning web application that predicts the price of a second-hand car based on user inputs. The project is built using Flask for backend and Linear Regression for prediction, and is deployed on Render.
+
+---
+
+## 🌐 Live Demo
+
+👉 https://ml-project-339j.onrender.com/
 
 ---
 
 ## 📌 Project Overview
 
-This project uses a Linear Regression Machine Learning model trained on a second-hand car dataset.  
-The trained model is integrated with a Flask web application to provide real-time car price predictions through a modern user interface.
+This project predicts second-hand car prices using a trained Machine Learning model. Users enter details like year, kilometers driven, and condition, and the model returns the estimated price instantly.
 
 ---
 
 ## ✨ Features
 
-- Predict second-hand car prices instantly
-- User-friendly web interface
-- Machine Learning based prediction
-- Flask backend integration
-- Responsive car-themed UI
-- End-to-end ML project
+- Real-time car price prediction
+- Clean and interactive web UI
+- Flask-based backend
+- Machine Learning model integration
+- Fully deployed web application
 
 ---
 
@@ -33,53 +37,60 @@ The trained model is integrated with a Flask web application to provide real-tim
 - NumPy
 - Pandas
 - Scikit-learn
+- Gunicorn (for deployment)
 
 ---
 
 ## 📂 Project Structure
 
-```bash
+```
 ML Project/
 │
 ├── main.py
 ├── linear_regression_model.pkl
 ├── requirements.txt
 ├── README.md
+│
 ├── templates/
 │     └── index.html
 ```
 
 ---
 
-## 🚀 How To Run The Project
+## ⚙️ How It Works
 
-### 1️⃣ Clone Repository
+1. User enters car details in the web form  
+2. Flask backend receives input  
+3. Data is passed to trained ML model  
+4. Model predicts car price  
+5. Result is displayed on UI  
 
+---
+
+## 🚀 How to Run Locally
+
+### 1️⃣ Clone the repository
 ```bash
-git clone <https://github.com/manepallineha/ML-Project>
+git clone https://github.com/your-username/your-repo-name.git
 ```
 
-### 2️⃣ Open Project Folder
-
+### 2️⃣ Go to project folder
 ```bash
 cd ML Project
 ```
 
-### 3️⃣ Install Required Libraries
-
+### 3️⃣ Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run Flask Application
-
+### 4️⃣ Run the application
 ```bash
-
+python main.py
 ```
 
-### 5️⃣ Open In Browser
-
-```bash
+### 5️⃣ Open in browser
+```
 http://127.0.0.1:5000
 ```
 
@@ -87,20 +98,19 @@ http://127.0.0.1:5000
 
 ## 📊 Machine Learning Model
 
-- Algorithm Used: Linear Regression
-- Dataset: Second-hand car dataset
-- Prediction Target: Car Price
+- Algorithm: Linear Regression  
+- Input Features: Year, Kilometers Driven, Condition  
+- Output: Estimated Car Price  
 
 ---
 
 ## 🎯 Future Improvements
 
-- Add more advanced ML models
-- Improve prediction accuracy
-- Add dropdown suggestions
-- Deploy project online
-- Add image upload functionality
-- Create responsive mobile version
+- Add more ML models (Random Forest, XGBoost)
+- Improve accuracy with feature engineering
+- Add dropdown auto-suggestions for car brands
+- Deploy using Docker
+- Mobile responsive UI improvements
 
 ---
 
